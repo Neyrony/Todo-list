@@ -11,7 +11,7 @@ class TaskForm(forms.ModelForm):
         fields = ("content", "deadline", "is_done", "tags")
         widgets = {
             "deadline": forms.DateInput(attrs={"type": "date"}),
-            "tags": forms.CheckboxSelectMultiple()
+            "tags": forms.CheckboxSelectMultiple(),
         }
 
     def clean_deadline(self):

@@ -9,7 +9,6 @@ class Task(models.Model):
     tags = models.ManyToManyField("Tag", related_name="tasks")
 
 
-
 class Tag(models.Model):
     name = models.CharField(max_length=255)
 
