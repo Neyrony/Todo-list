@@ -11,6 +11,23 @@
   <title>Todo list</title>
 </head>
 <body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2">
+        {% block sidebar %}
+        	
+        {% endblock %}    
+      </div>
+      <div class="col-sm-10">
+        {% block content %}
 
+        {% endblock %}
+
+        {% block pagination %}
+
+        {% endblock %}
+      </div>
+    </div>
+  </div>
 </body>
 </html>
