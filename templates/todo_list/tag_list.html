@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Tags <a class="btn btn-primary float-end mt-3" href="#">Add</a></h1>
+  <h1>Tags <a class="btn btn-primary float-end mt-3" href="{% url 'todo_list:tag_create' %}">Add</a></h1>
 	{% if tag_list %}
     	<table class="table">
         <tr>
@@ -12,8 +12,8 @@
         {% for tag in tag_list %}
           <tr>
             <td>{{ tag.name }}</td>
-            <td><a class="btn btn-secondary" href="#">Update</a></td>
-            <td><a class="btn btn-secondary" href="#">Delete</a></td>
+            <td><a class="btn btn-secondary" href="{% url 'todo_list:tag_update' tag.pk %}">Update</a></td>
+            <td><a class="btn btn-secondary" href="{% url 'todo_list:tag_delete' tag.pk %}">Delete</a></td>
           </tr>
         {% endfor %}
       </table>
