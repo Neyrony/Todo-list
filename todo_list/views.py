@@ -1,6 +1,6 @@
 from django.views.generic import ListView
 
-from todo_list.models import Task
+from todo_list.models import Task, Tag
 
 
 class TaskListView(ListView):
@@ -9,3 +9,9 @@ class TaskListView(ListView):
 
     def get_queryset(self):
         return Task.objects.prefetch_related("tags")
+
+
+class TagListView(ListView):
+    model = Tag
+    paginate_by = 10
+
