@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "debug_toolbar",
+    "crispy_forms",
+    "crispy_bootstrap4",
     "todo_list",
 ]
 
@@ -124,3 +126,7 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
